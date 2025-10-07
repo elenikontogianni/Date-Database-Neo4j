@@ -18,3 +18,20 @@ MERGE (:Movie {title: 'Crazy, Stupid, Love', year: 2011, imdb: 7.4, emotional: 9
 MERGE (:Movie {title: 'How to Lose a Guy in 10 Days', year: 2003, imdb: 6.5, emotional: 7, drama: 4, romance: 9, action: 2, funny: 8, char_dev: 7, adventure: 3});
 MERGE (:Movie {title: 'Back to the Future', year: 1985, imdb: 8.5, emotional: 8, drama: 6, romance: 6, action: 7, funny: 8, char_dev: 8, adventure: 10});
 MERGE (:Movie {title: 'Top Gun', year: 1986, imdb: 7.0, emotional: 7, drama: 7, romance: 7, action: 10, funny: 5, char_dev: 7, adventure: 8});
+MERGE (:Movie {title: 'Amélie', year: 2001, imdb: 8.3, emotional: 9, drama: 5, romance: 8, action: 1, funny: 8, char_dev: 8, adventure: 3});
+MERGE (:Movie {title: 'Silver Linings Playbook', year: 2012, imdb: 7.7, emotional: 9, drama: 8, romance: 9, action: 1, funny: 8, char_dev: 9, adventure: 2});
+MERGE (:Movie {title: 'The Big Sick', year: 2017, imdb: 7.5, emotional: 8, drama: 6, romance: 9, action: 1, funny: 9, char_dev: 8, adventure: 2});
+MERGE (:Movie {title: 'Clueless', year: 1995, imdb: 6.9, emotional: 7, drama: 4, romance: 8, action: 1, funny: 9, char_dev: 7, adventure: 2});
+MERGE (:Movie {title: 'Indiana Jones and the Last Crusade', year: 1989, imdb: 8.2, emotional: 7, drama: 6, romance: 5, action: 10, funny: 7, char_dev: 8, adventure: 10});
+MERGE (:Movie {title: 'Stardust', year: 2007, imdb: 7.6, emotional: 8, drama: 6, romance: 9, action: 7, funny: 7, char_dev: 8, adventure: 9});
+MERGE (:Movie {title: 'About Time', year: 2013, imdb: 7.8, emotional: 9, drama: 7, romance: 9, action: 1, funny: 8, char_dev: 9, adventure: 4});
+MERGE (:Movie {title: 'The Grand Budapest Hotel', year: 2014, imdb: 8.1, emotional: 7, drama: 6, romance: 5, action: 4, funny: 9, char_dev: 7, adventure: 8});
+MERGE (:Movie {title: 'Midnight in Paris', year: 2011, imdb: 7.6, emotional: 8, drama: 5, romance: 8, action: 1, funny: 7, char_dev: 7, adventure: 4});
+MERGE (:Movie {title: 'Pride and Prejudice', year: 2005, imdb: 7.8, emotional: 9, drama: 8, romance: 10, action: 1, funny: 6, char_dev: 9, adventure: 2});
+
+//queries
+MATCH (m:Movie)
+WITH m,
+     (m.imdb + (m.romance * 1.2) + (m.funny * 1.2) + m.emotional + m.char_dev + (m.drama * 0.8) + (m.action * 0.8) + (m.adventure * 0.8)) / 8 AS first_date_score
+RETURN m.title, m.year, m.imdb, first_date_score
+ORDER BY first_date_score DESC;
