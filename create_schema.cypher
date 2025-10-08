@@ -28,7 +28,16 @@ MERGE (:Movie {title: 'About Time', year: 2013, imdb: 7.8, emotional: 9, drama: 
 MERGE (:Movie {title: 'The Grand Budapest Hotel', year: 2014, imdb: 8.1, emotional: 7, drama: 6, romance: 5, action: 4, funny: 9, char_dev: 7, adventure: 8});
 MERGE (:Movie {title: 'Midnight in Paris', year: 2011, imdb: 7.6, emotional: 8, drama: 5, romance: 8, action: 1, funny: 7, char_dev: 7, adventure: 4});
 MERGE (:Movie {title: 'Pride and Prejudice', year: 2005, imdb: 7.8, emotional: 9, drama: 8, romance: 10, action: 1, funny: 6, char_dev: 9, adventure: 2});
-
+MERGE (:Movie {title: 'Shrek', year: 2001, imdb: 7.9, emotional: 8, drama: 4, romance: 7, action: 6, funny: 9, char_dev: 8, adventure: 8});
+MERGE (:Movie {title: 'Forrest Gump', year: 1994, imdb: 8.8, emotional: 10, drama: 8, romance: 8, action: 4, funny: 7, char_dev: 9, adventure: 7});
+MERGE (:Movie {title: 'The Fault in Our Stars', year: 2014, imdb: 7.7, emotional: 10, drama: 9, romance: 10, action: 1, funny: 4, char_dev: 9, adventure: 3});
+MERGE (:Movie {title: 'Zombieland', year: 2009, imdb: 7.6, emotional: 7, drama: 5, romance: 6, action: 8, funny: 9, char_dev: 7, adventure: 7});
+MERGE (:Movie {title: 'Pitch Perfect', year: 2012, imdb: 7.1, emotional: 7, drama: 5, romance: 7, action: 1, funny: 9, char_dev: 7, adventure: 2});
+MERGE (:Movie {title: 'The Secret Life of Walter Mitty', year: 2013, imdb: 7.3, emotional: 8, drama: 6, romance: 6, action: 4, funny: 7, char_dev: 8, adventure: 9});
+MERGE (:Movie {title: '500 Days of Summer', year: 2009, imdb: 7.7, emotional: 9, drama: 7, romance: 9, action: 1, funny: 8, char_dev: 9, adventure: 2});
+MERGE (:Movie {title: 'Enchanted', year: 2007, imdb: 7.1, emotional: 8, drama: 4, romance: 8, action: 3, funny: 8, char_dev: 7, adventure: 6});
+MERGE (:Movie {title: 'The Mummy', year: 1999, imdb: 7.1, emotional: 6, drama: 5, romance: 6, action: 9, funny: 7, char_dev: 7, adventure: 10});
+MERGE (:Movie {title: 'Love, Simon', year: 2018, imdb: 7.5, emotional: 9, drama: 7, romance: 9, action: 1, funny: 7, char_dev: 8, adventure: 2});
 //queries
 MATCH (m:Movie)
 WITH m,
