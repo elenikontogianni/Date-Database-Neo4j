@@ -1,4 +1,4 @@
-##🎬 First Date Movies Neo4j: Find the Perfect Date-Night Flick! 💖##
+🎬 First Date Movies Neo4j: Find the Perfect Date-Night Flick! 💖
 Welcome to First Date Movies Neo4j, your go-to project for picking the ideal movie for a first date! 🌟 Built with a slick Neo4j graph database and a Java app, this project rates movies based on a custom "first-date score" that balances romance 💕, humor 😂, action ⚡, adventure 🗺️, and more. Whether you're vibing with The Princess Bride's swashbuckling romance or steering clear of The Purge's chaos, we've got you covered!
 Why This Project Rocks 🎸
 
@@ -73,43 +73,6 @@ Add a Movie: Use the Java app or Cypher.app.addMovie("Clueless", 1995, 6.9, 7, 4
 
 Get Recommendations: Call getRecommendations(7.0) for top date-night picks.
 Sample Output:
-
-
-Title
-Year
-IMDb
-First-Date Score
-
-
-
-Back to the Future
-1985
-8.5
-8.1
-
-
-The Princess Bride
-1987
-8.0
-8.0
-
-
-Amélie
-2001
-8.3
-7.9
-
-
-Crazy, Stupid, Love
-2011
-7.4
-7.9
-
-
-About Time
-2013
-7.8
-7.9
 
 
 
